@@ -1,7 +1,7 @@
 # ISTMEscore
 Calculating immune and strmal scores based on bulk transcriptome
 
-The ISTMEscore is an simple and user-friendly tool to bulk gene expression data reading (especially the expression array data of GEO database), standardization and calculation of our TME-related scores (immune, stromal). The capability of RMA/MAS5 standardization for raw chip data was based on affy package (1). The calculation of TME-related scores was realized by GSVA package (2).
+The ISTMEscore (Immune and stromal scores in tumor microenvironment) is an simple and user-friendly tool to bulk gene expression data reading (especially the expression array data of GEO database), standardization and calculation of our TME-related scores (immune, stromal). The capability of RMA/MAS5 standardization for raw chip data was based on affy package (1). The calculation of TME-related scores was realized by GSVA package (2).
 To use ISTMEscore package, you should download zip compression package named "ISTMEscore_0.1.0.zip" in GitHub (https://github.com/ZengZihang/ISTMEscore). Next, you should install this zip in R or Rstudio, and load it.
 The ISTMEscore consists of three functions, including ISTMEscore_standard, ISTMEscore_score and ISTMEscore_subtype functions. The ISTMEscore_standard function is used to data reading and standardization. The ISTMEscore_score is used to Calculate Zeng's anti-tumor immune and pro-tumor stromal scores based on bulk transcriptome. The ISTMEscore_subtype is used to identify the novel 4 TME subtypes in Zeng's study.
 
