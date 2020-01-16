@@ -9,15 +9,11 @@ The ISTMEscore consists of three functions, including ISTMEscore_standard, ISTME
 # ISTMEscore_standard
 We analysis the GSE68571 data set, for instance. The inputdata is download in https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE68571&format=file, and the GPL is download in https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL80. Then try to run the following code and gain the processed data:
 
-data=ISTMEscore_standard(inputdata="D:/GSE68571_RAW", GPL="D:/GPL80-30376.txt", rank_col=F, rank_row=F, log2=F, z_score=T, min_max=F, datatype="CEL", aggregatemethod="max", probe_first=T, Ngene=11)
+data=ISTMEscore_standard(inputdata="D:/GSE68571_RAW", GPL="D:/GPL80-30376.txt", rank_col=F, rank_row=F, log2=F, z_score=F, min_max=F, datatype="CEL", aggregatemethod="max", probe_first=T, Ngene=11)
 
 For gene expression matrix of GSE68571 (ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE68nnn/GSE68571/matrix/GSE68571_series_matrix.txt.gz) and annotation files from GEO or with the same format as GEO files: 
 
 data=ISTMEscore_standard(inputdata="D:/GSE68571_series_matrix.txt", GPL="D:/GPL80-30376.txt", rank_col=F, rank_row=F, log2=F, z_score=F, min_max=F, datatype="chip_matrix", aggregatemethod="max", probe_first=T, raw_standard="RMA",Ngene=11)
-
-For CEL files, the code is as follows:
-
-data=ISTMEscore_standard(inputdata="D:/GSE68571_RAW", GPL="D:/GPL80-30376.txt", rank_col=F, rank_row=F, log2=F, z_score=F, min_max=F, datatype="CEL", aggregatemethod="max", probe_first=T, Ngene=11)
 
 Next, we calculate the immune and stromal scores by ISTMEscore_score and subtypes by ISTMEscore_subtype.
 # ISTMEscore_score
