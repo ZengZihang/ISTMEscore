@@ -8,7 +8,7 @@ To use ISTMEscore package, you can download Binary package named "ISTMEscore_0.1
 
 ```install.packages("E:/ISTMEscore_0.1.0.tar.gz", repos = NULL, type = "source")```
 
-or
+or for Windows:
 
 ```install.packages("E:/ISTMEscore_0.1.0.zip", repos = NULL, type = "win.binary")```
 
