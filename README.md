@@ -20,7 +20,7 @@ The ISTMEscore consists of three functions, including **ISTMEscore_standard**, *
 
 
 ## ISTMEscore_standard
-We analysis the GSE68571 data set, for instance. The **CEL** inputdata is download in https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE68571&format=file then unzip, and the GPL is download in https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL80. Then try to run the following code:
+We analysis the GSE68571 data set, for instance. The **CEL** inputdata is download in https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE68571&format=file then ***unzip***, and the GPL is download in https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL80. Then try to run the following code:
 
 ```data=ISTMEscore_standard(inputdata="D:/GSE68571_RAW", GPL="D:/GPL80-30376.txt", rank_col=F, rank_row=F, log2=F, z_score=F, min_max=F, datatype="CEL", aggregatemethod="max", probe_first=T, Ngene=11)```
 
