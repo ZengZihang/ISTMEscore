@@ -1,4 +1,4 @@
-# 2010-01-18 update log ISTMEscore_0.1.1
+# 2010-01-18 update log: ISTMEscore_0.1.1
 ***Fix the bug of Numer function missing***
 
 # ISTMEscore
