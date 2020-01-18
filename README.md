@@ -1,5 +1,5 @@
 # 2020-01-18 update log: ISTMEscore_0.1.1
-***Fix the bug of Numer function missing***
+***Fix a bug: the Numer function missing***
 
 # ISTMEscore
 Calculating immune and strmal scores based on bulk transcriptome
