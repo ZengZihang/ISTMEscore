@@ -42,4 +42,4 @@ References
 1.	Gautier L, Cope L, Bolstad BM, Irizarry RA. affy--analysis of Affymetrix GeneChip data at the probe level. Bioinformatics (Oxford, England). 2004;20:307-15.
 2.	Hanzelmann S, Castelo R, Guinney J. GSVA: gene set variation analysis for microarray and RNA-seq data. BMC bioinformatics. 2013;14:7.
 
-**Please cite "Balance of Immune and Stromal Components In Tumor Microenvironment Predicted Prognosis and Benefited from Immunotherapy: A Multi-Omics Pan-Cancer Analysis"**
+**Please cite "Activation Status of Immune and Stromal Components In Tumor Microenvironment Predicted Prognosis and Benefited from Immunotherapy: A Gene-Based Multi-Cancer Analysis"**
