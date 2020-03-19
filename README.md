@@ -31,7 +31,7 @@ For **gene expression matrix** of GSE68571 (ftp://ftp.ncbi.nlm.nih.gov/geo/serie
 
 ```data=ISTMEscore_standard(inputdata="E:/GSE68571_series_matrix.txt", GPL="E:/GPL80-30376.txt", rank_col=F, rank_row=F, log2=F, z_score=F, min_max=F, datatype="chip_matrix", aggregatemethod="max", probe_first=T, raw_standard="RMA",Ngene=11)```
 
-Next, we calculate the immune and stromal scores by **ISTMEscore_score** and identify the tumor microenvironment subtypes by **ISTMEscore_subtype**.
+The```data```is a pretreated expression matrix. Next, we calculate the immune and stromal scores by **ISTMEscore_score** and identify the tumor microenvironment subtypes by **ISTMEscore_subtype**.
 ## ISTMEscore_score
 ```ISTMEscore_score(data)```
 
