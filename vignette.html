@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>ISTMEscore</title>
+</head>
+
+<body>
+
+<h1>Calculation of immune and stromal scores in tumor microenvironment</h1>
+
+<h2><strong>Zihang Zeng</strong></h2>
+
+
+<h2>Data reading</h2>
+
+<p>Loading example</p>
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com">##Loading example</span>
+<span class="hl kwd">library</span><span class="hl std">(ISTMEscore)</span>
+<span class="hl std">data</span><span class="hl kwb">=</span><span class="hl kwd">ISTMEscore_read</span><span class="hl std">(</span><span class="hl kwc">inputdata</span><span class="hl std">=</span><span class="hl str">&quot;data/GSE50081_series_matrix.txt.gz&quot;</span><span class="hl std">,</span> <span class="hl kwc">GPL</span><span class="hl std">=</span><span class="hl str">&quot;data/GPL570-55999.txt&quot;</span><span class="hl std">,</span> <span class="hl kwc">rank_col</span><span class="hl std">=F,</span> <span class="hl kwc">rank_row</span><span class="hl std">=F,</span> <span class="hl kwc">log2</span><span class="hl std">=F,</span> <span class="hl kwc">z_score</span><span class="hl std">=F,</span> <span class="hl kwc">min_max</span><span class="hl std">=F,</span> <span class="hl kwc">datatype</span><span class="hl std">=</span><span class="hl str">&quot;chip_matrix&quot;</span><span class="hl std">,</span> <span class="hl kwc">aggregatemethod</span><span class="hl std">=</span><span class="hl str">&quot;max&quot;</span><span class="hl std">,</span> <span class="hl kwc">probe_first</span><span class="hl std">=T,</span><span class="hl kwc">Ngene</span><span class="hl std">=</span><span class="hl num">11</span><span class="hl std">)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## [1] &quot;..Data reading...&quot;
+## [1] &quot;..Annotation...&quot;
+## [1] &quot;..Standardization...&quot;
+## [1] &quot;..Done...&quot;
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl std">data[</span><span class="hl num">1</span><span class="hl opt">:</span><span class="hl num">5</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl opt">:</span><span class="hl num">5</span><span class="hl std">]</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##          GSM1213669 GSM1213670 GSM1213671 GSM1213672 GSM1213673
+## A1BG       7.210846   5.929092   6.072073   7.165652   6.840766
+## A1BG-AS1   5.033251   4.860658   5.258204   5.285564   5.167667
+## A1CF       3.884443   3.754646   3.761913   3.958770   3.908013
+## A2M       11.287937  11.700433  12.797201  11.985395  12.459536
+## A2M-AS1    6.010155   6.519793   6.260656   5.723378   5.954067
+</pre></div>
+</div></div>
+
+<h2>Calculation of immune and stromal scores</h2>
+
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">score</span><span class="hl kwb">=</span><span class="hl kwd">ISTMEscore_score</span><span class="hl std">(data)</span>
+<span class="hl kwd">head</span><span class="hl std">(score)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##            immune_score stromal_score
+## GSM1213669    0.4292186      3.574987
+## GSM1213670    0.7450805      3.662860
+## GSM1213671    0.6019718      3.267943
+## GSM1213672    0.6047681      3.641724
+## GSM1213673    0.3159185      3.554822
+## GSM1213674    0.7172173      3.413113
+</pre></div>
+</div></div>
+
+<h2>Identification of TME subtypes</h2>
+
+<div class="chunk" id="unnamed-chunk-3"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">group</span><span class="hl kwb">=</span><span class="hl kwd">ISTMEscore_subtype</span><span class="hl std">(data)</span>
+<span class="hl kwd">head</span><span class="hl std">(group)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##             GSM1213669             GSM1213670             GSM1213671
+## &quot;immune_L &amp; stromal_H&quot; &quot;immune_H &amp; stromal_H&quot; &quot;immune_H &amp; stromal_L&quot;
+##             GSM1213672             GSM1213673             GSM1213674
+## &quot;immune_H &amp; stromal_H&quot; &quot;immune_L &amp; stromal_H&quot; &quot;immune_H &amp; stromal_L&quot;
+</pre></div>
+</div></div>
+
+<h2>identify genes highly expressed in specific TME subtypes</h2>
+
+<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">SSEA_gene</span><span class="hl kwb">=</span><span class="hl kwd">ISTMEscore_SSEA</span><span class="hl std">(data,group,</span><span class="hl kwc">multigroup</span><span class="hl std">=F,</span><span class="hl kwc">threshold_anova_p</span><span class="hl std">=</span><span class="hl num">0.0001</span><span class="hl std">,</span><span class="hl kwc">nPerm</span><span class="hl std">=</span><span class="hl num">100</span><span class="hl std">)</span>
+
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl kwd">head</span><span class="hl std">(SSEA_gene)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##              ID                group
+## A2M-AS1 A2M-AS1 immune_H &amp; stromal_L
+## ABCA6     ABCA6 immune_H &amp; stromal_L
+## ABCB1     ABCB1 immune_H &amp; stromal_L
+## ACKR1     ACKR1 immune_H &amp; stromal_L
+## ACOT7     ACOT7 immune_L &amp; stromal_H
+## ACOT8     ACOT8 immune_L &amp; stromal_H
+</pre></div>
+</div></div>
+
+
+</body>
+</html>
