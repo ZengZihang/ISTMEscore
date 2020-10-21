@@ -3,11 +3,11 @@ Calculation of immune and stromal scores in tumor microenvironment
 
 To use ISTMEscore package, you can download Binary package named "ISTMEscore_1.0.0.zip" for Windows or Source package named "ISTMEscore_1.0.0.tar.gz" for Linux and Windows. Next, you could install this package with the following codes in R：
 
-```install.packages("File path/ISTMEscore_0.1.1.tar.gz", repos = NULL, type = "source")```
+```install.packages("File path/ISTMEscore_1.0.0.tar.gz", repos = NULL, type = "source")```
 
 or for Windows:
 
-```install.packages("File path/ISTMEscore_0.1.1.zip", repos = NULL, type = "win.binary")```
+```install.packages("File path/ISTMEscore_1.0.0.zip", repos = NULL, type = "win.binary")```
 
 then
 
