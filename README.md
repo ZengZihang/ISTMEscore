@@ -25,6 +25,6 @@ The ISTMEscore consists of the four functions, including **ISTMEscore_read**, **
 ```group=ISTMEscore_subtype(data)```
 
 ## identify genes highly expressed in specific TME subtypes
-```SSEA_gene=ISTMEscore_SSEA(data,group,multigroup=F,threshold_anova_p=0.001,nPerm=100,cores=3)```
+```SSEA_gene=ISTMEscore_SSEA(data,group,multigroup=F,threshold_anova_p=0.001,nPerm=100)```
 
 **Please cite "Immune and Stromal Scoring System Associated with Prognosis and Response to Immune Checkpoint Inhibitors: A Gene-Based Multi-Cancer Analysiss"**
