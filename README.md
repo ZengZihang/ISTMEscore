@@ -28,4 +28,4 @@ The sample data are downloaded in https://ftp.ncbi.nlm.nih.gov/geo/series/GSE50n
 ## identify genes highly expressed in specific TME subtypes
 ```SSEA_gene=ISTMEscore_SSEA(data,group,multigroup=F,threshold_anova_p=0.001,nPerm=100)```
 
-**Please cite "Immune and Stromal Scoring System Associated with Prognosis and Immunotherapy: A Gene-Based Multi-Cancer Analysis"**
+**Please cite "Zeng (J Trans Med, 2021). Immune and Stromal Scoring System Associated with Tumor Microenvironment and Prognosis: A Gene-Based Multi-Cancer Analysis"**
